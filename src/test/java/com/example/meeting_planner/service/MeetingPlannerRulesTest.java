@@ -79,7 +79,7 @@ public class MeetingPlannerRulesTest {
             meetingPlannerRules.getMostEfficientRoom(planning, new ArrayList<>(), MeetingParams.builder().hour(11).date(LocalDate.now()).build());
             Assertions.fail();
         } catch (NoRoomAvailableException exception) {
-            assertThat(exception.getMessage()).isEqualTo("Aucune salle disponible à ce jour");
+            assertThat(exception.getMessage()).isEqualTo("Aucune salle disponible à ce jour correspondant aux critères d'entrée");
         }
     }
 

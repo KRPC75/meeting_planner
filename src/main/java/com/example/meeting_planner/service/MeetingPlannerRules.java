@@ -31,7 +31,7 @@ public class MeetingPlannerRules {
 
         List<Reservation> reservationsAvailable = new ArrayList<>();
         int difference = 0;
-        while (reservationsAvailable.isEmpty() && (hour + difference <= 20 && hour - difference >= 8)) {
+        while (reservationsAvailable.isEmpty() && (hour + difference <= 20 || hour - difference >= 8)) {
             reservationsAvailable = getRoomsWithDifferencesHours(planningOfTheDay, rooms, meetingParams, difference++);
         }
         return getMostEfficientReservation(reservationsAvailable);

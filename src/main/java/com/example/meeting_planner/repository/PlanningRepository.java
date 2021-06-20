@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public interface PlanningRepository extends JpaRepository<PlanningEntity, Long> {
-    List<PlanningEntity> findByDate(final LocalDate date);
+    List<PlanningEntity> findByDateOrderByHour(final LocalDate date);
 
     PlanningEntity findByDateAndHour(final LocalDate date, final Integer hour);
 }

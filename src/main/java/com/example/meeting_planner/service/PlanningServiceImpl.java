@@ -16,7 +16,7 @@ public class PlanningServiceImpl implements PlanningService {
 
     @Override
     public List<PlanningEntity> getPlanningOfTheDate(LocalDate day) {
-        return planningRepository.findByDate(day);
+        return planningRepository.findByDate(day == null ? LocalDate.now() : day);
     }
 
     @Override

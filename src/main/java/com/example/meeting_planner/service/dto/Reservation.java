@@ -1,10 +1,12 @@
 package com.example.meeting_planner.service.dto;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
-@Data
+@Getter
+@Setter
 public class Reservation {
     private String roomName;
     private Integer hour;
